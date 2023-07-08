@@ -1,0 +1,75 @@
+/* General styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Home page styles */
+  .home {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .home-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .home-subtitle {
+    font-size: 24px;
+    font-style: italic;
+    text-align: center;
+  }
+  
+  .books-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .book-card {
+    width: 300px;
+    margin: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .home-book-cover {
+    height: 400px;
+  }
+  
+  .hoom-book-cover img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+  }
+  
+  .book-info {
+    padding: 10px;
+  }
+  
+  .book-title {
+    font-size: 18px;
+  }
+  
+  .book-author {
+    font-size: 16px;
+  }
+  
+  .book-price {
+    font-size: 14px;
+  }
+  
+  .book-detail-link {
+    display: inline-block;
+    padding: 5px;
+    background-color: #eee;
+    color: #333;
+  }
+  
+  .book-detail-link:hover {
+    background-color: #ddd;
+  }
+  
