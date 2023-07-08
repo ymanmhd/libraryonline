@@ -1,5 +1,8 @@
 import React, { useState, } from 'react';
 import { Link , useParams} from 'react-router-dom';
+import { Card, CardMedia, CardContent, Typography } from '@mui/material';
+
+
 
 function BookDetail (props){
 
@@ -41,20 +44,34 @@ function BookDetail (props){
     if (book) {
       const { title, authors, publisher, description, image ,year} = book;
       return (
-        <div className="book-detail">
-          <div className="book-cover">
-            <img src={image} alt={title} />
-          </div>
-          <div className="book-info">
-            <h1 className="book-title">{title}</h1>
-            <p className="book-author">by {authors}</p>
-            <p className="book-genre">{publisher} - {year}</p>
-            <p className="book-description">{description}</p>
-            <p className="book-price">$20</p>
+        <Card className="book-detail">
+          <CardMedia
+            className="book-cover"
+            component="img"
+            height="50%"
+            image={image}
+            title={title}
+          />
+          <CardContent className="book-info">
+            <Typography variant="h5" component="h1" className="book-title">
+              {title}
+            </Typography>
+            <Typography variant="h6" component="p" className="book-author">
+              by {authors}
+            </Typography>
+            <Typography variant="subtitle1" component="p" className="book-genre">
+              {publisher} - {year}
+            </Typography>
+            <Typography variant="body1" component="p" className="book-description">
+              {description}
+            </Typography>
+            <Typography variant="body2" component="p" className="book-price">
+              $20
+            </Typography>
             <button className="book-add-to-cart">Add to cart</button>
             <Link to="/" className="book-back-to-home">Back to home</Link>
-          </div>
-        </div>
+          </CardContent>
+        </Card>
       );
     }
 

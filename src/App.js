@@ -68,7 +68,7 @@ function App() {
       {/* Use BrowserRouter to enable routing */}
       <BrowserRouter>
         {/* Render the Header component */}
-        <Header />
+        <Header /> 
         {/* Use Switch to render different components based on the path */}
         <Routes>
           {/* Render the Home component for the root path */}
